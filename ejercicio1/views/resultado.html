@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la consulta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+            max-width: 32rem;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fd7d14;
+            background: #fff3e8;
+            padding: 0.25rem 0.65rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: #5a6a7a;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .result-container {
+            background: #f7f9fc;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .result-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8a9bb0;
+            margin-bottom: 0.5rem;
+        }
+        .result-value {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #fd7d14;
+            word-break: break-word;
+        }
+        hr {
+            margin: 1.5rem 0 1rem 0;
+            border: none;
+            border-top: 1px solid #e2e8f0;
+        }
+        .metadata {
+            font-size: 0.7rem;
+            color: #8a9bb0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #fd7d14;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">Resultado</div>
+        <h1>Dato registrado</h1>
+        <p>Este es el animal que escribiste:</p>
+        
+        <div class="result-container">
+            <p>Tu animal favorito es:</p>
+            <div class="result-value">{{animal}}</div>
+        </div>
+        
+        <hr>
+        
+        <a href="/">← Ejecutar nueva consulta</a>
+    </div>
+</body>
+</html>

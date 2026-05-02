@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal favorito</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .card {
+            background: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.03);
+            max-width: 32rem;
+            width: 100%;
+            padding: 2rem;
+            transition: box-shadow 0.2s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+        }
+        
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fd7d14;
+            background: #fff3e8;
+            padding: 0.25rem 0.65rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 1.65rem;
+            font-weight: 500;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .subtitle {
+            color: #5a6a7a;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.75rem;
+            border-left: 0.25rem solid #cbd5e0;
+            padding-left: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            font-family: inherit;
+            border: 1px solid #cbd5e0;
+            border-radius: 0.375rem;
+            background: #ffffff;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #fd7d14;
+            box-shadow: 0 0 0 0.2rem rgba(92, 107, 192, 0.15);
+        }
+        
+        input::placeholder {
+            color: #a0aec0;
+        }
+        
+        button {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            font-family: inherit;
+            color: #ffffff;
+            background: #fd7d14;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background 0.15s ease, transform 0.1s ease;
+        }
+        
+        button:hover {
+            background: #fd7d14;
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        hr {
+            margin: 1.75rem 0 1rem 0;
+            border: none;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .metadata {
+            font-size: 0.7rem;
+            color: #8a9bb0;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+        
+        a {
+            color: #fd7d14;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">Ejercicio 1</div>
+        <h1>¿Cuál es tu animal favorito?</h1>
+
+        <div class="subtitle">
+           <p>Escríbelo aquí y te lo mostraré en la siguiente página.</p> 
+        </div>
+        
+        <form action="/enviar" method="POST">
+            <div class="form-group">
+                <label for="animal">Animal favorito</label>
+                <input type="text" id="animal" name="animal" 
+                       placeholder="Ejemplo: León, Caballo, Ballena azul, etc."
+                       required autofocus>
+            </div>
+            <button type="submit">Procesar y enviar →</button>
+        </form>
+        
+        <hr>
+        
+    </div>
+</body>
+</html>
